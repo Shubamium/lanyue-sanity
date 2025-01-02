@@ -15,6 +15,11 @@ export default defineType({
       name: 'title',
       type: 'string',
     }),
+    defineField({
+      name: 'order',
+      description: 'Show artist in order (Ascending) on their corresponding tabs',
+      type: 'number',
+    }),
 
     defineField({
       name: 'role',
@@ -25,6 +30,7 @@ export default defineType({
           {value: 'illustrator', title: 'Illustrator'},
           {value: 'rigger', title: 'Rigger'},
           {value: 'graphic_design', title: 'Graphic Design'},
+          {value: 'music', title: 'Music'},
         ],
       },
     }),
