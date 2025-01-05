@@ -15,22 +15,19 @@ export default defineType({
     }),
 
     defineField({
-      name: 'pinned_pricing',
-      title: 'Pinned Pricing',
-      description: 'Pricing to show at the top of commissions page',
-      type: 'reference',
-      to: [{type: 'pricing'}],
-    }),
-    defineField({
-      name: 'pricing_list',
-      title: 'Pricing Lists',
-      description: 'The list of pricings below the pinned one',
-      type: 'array',
-      of: [
-        {
-          type: 'reference',
-          to: [{type: 'pricing'}],
-        },
+      name: 'footer',
+      type: 'object',
+      fields: [
+        defineField({
+          name: 'h',
+          title: 'Heading',
+          type: 'string',
+        }),
+        defineField({
+          name: 'p',
+          title: 'Paragraph',
+          type: 'text',
+        }),
       ],
     }),
   ],
