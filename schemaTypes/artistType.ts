@@ -1,19 +1,22 @@
 import {defineField, defineType} from 'sanity'
 
 export default defineType({
-  name: 'imaged',
-  title: 'Image',
-  type: 'object',
+  name: 'artist_type',
+  title: 'Artists - Category',
+  type: 'document',
+
   fields: [
     // Define your fields here
     defineField({
-      name: 'artist',
-      title: 'Artist Name',
+      name: 'title',
       type: 'string',
     }),
     defineField({
-      name: 'image',
-      type: 'image',
+      name: 'slug',
+      type: 'slug',
+      options: {
+        source: 'title',
+      },
     }),
   ],
 })

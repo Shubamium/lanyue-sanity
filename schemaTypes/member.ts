@@ -2,7 +2,7 @@ import {defineField, defineType} from 'sanity'
 
 export default defineType({
   name: 'members',
-  title: 'Artists',
+  title: 'Artists - Members',
   type: 'document',
 
   fields: [
@@ -21,17 +21,30 @@ export default defineType({
       type: 'number',
     }),
 
+    // defineField({
+    //   name: 'role',
+    //   title: 'Role',
+    //   type: 'string',
+    //   options: {
+    //     list: [
+    //       {value: 'illustrator', title: 'Illustrator'},
+    //       {value: 'rigger', title: 'Rigger'},
+    //       {value: 'graphic_design', title: 'Graphic Design'},
+    //       {value: 'music', title: 'Music'},
+    //     ],
+    //   },
+    // }),
     defineField({
       name: 'role',
       title: 'Role',
-      type: 'string',
+      type: 'reference',
+      to: [
+        {
+          type: 'artist_type',
+        },
+      ],
       options: {
-        list: [
-          {value: 'illustrator', title: 'Illustrator'},
-          {value: 'rigger', title: 'Rigger'},
-          {value: 'graphic_design', title: 'Graphic Design'},
-          {value: 'music', title: 'Music'},
-        ],
+        disableNew: true,
       },
     }),
     defineField({
@@ -52,6 +65,11 @@ export default defineType({
           name: 'art',
           type: 'image',
         }),
+        defineField({
+          name: 'video',
+          description: 'Recommended .webm',
+          type: 'file',
+        }),
       ],
     }),
 
@@ -71,7 +89,7 @@ export default defineType({
   preview: {
     select: {
       title: 'name',
-      subtitle: 'role',
+      subtitle: 'role.title',
     },
   },
 })

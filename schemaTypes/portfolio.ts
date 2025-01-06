@@ -2,6 +2,7 @@ import {defineField, defineType} from 'sanity'
 
 export default defineType({
   name: 'portfolio',
+  title: 'Portfolio - Works',
   type: 'document',
 
   fields: [
@@ -21,7 +22,25 @@ export default defineType({
       title: 'Image List',
       description: 'Select file for video  (recommended format .webm)',
       type: 'array',
-      of: [{type: 'image'}, {type: 'file'}],
+      of: [
+        {type: 'imaged'},
+        defineField({
+          name: 'video',
+          title: 'Video',
+          type: 'object',
+          fields: [
+            defineField({
+              name: 'artist',
+              type: 'string',
+            }),
+            defineField({
+              name: 'file',
+              description: 'Recommended .webm',
+              type: 'file',
+            }),
+          ],
+        }),
+      ],
     }),
   ],
 })
