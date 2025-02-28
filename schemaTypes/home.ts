@@ -235,6 +235,17 @@ export default defineType({
                   type: 'string',
                 }),
                 defineField({
+                  name: 'size',
+                  title: 'Sizing',
+                  type: 'string',
+                  options: {
+                    list: [
+                      {value: 'portrait', title: 'Portrait'},
+                      {value: 'landscape', title: 'Landscape'},
+                    ],
+                  },
+                }),
+                defineField({
                   name: 'artwork',
                   type: 'image',
                 }),

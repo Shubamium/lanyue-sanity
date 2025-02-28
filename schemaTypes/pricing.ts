@@ -12,7 +12,12 @@ export default defineType({
     }),
     defineField({
       name: 'description',
-      type: 'text',
+      type: 'array',
+      of: [
+        {
+          type: 'block',
+        },
+      ],
     }),
     defineField({
       name: 'image',
