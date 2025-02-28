@@ -31,11 +31,11 @@ export default defineType({
       of: [{type: 'block'}],
     }),
 
-    defineField({
-      name: 'em',
-      title: 'Contact Email',
-      type: 'string',
-    }),
+    // defineField({
+    //   name: 'em',
+    //   title: 'Contact Email',
+    //   type: 'string',
+    // }),
 
     defineField({
       name: 'il',

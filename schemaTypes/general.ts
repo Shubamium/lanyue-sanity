@@ -30,5 +30,21 @@ export default defineType({
         }),
       ],
     }),
+
+    defineField({
+      name: 'mail',
+      title: 'Contact Email',
+      type: 'string',
+    }),
+    defineField({
+      name: 'x',
+      title: 'X Url',
+      type: 'url',
+    }),
+    defineField({
+      name: 'discord',
+      title: 'Discord Url',
+      type: 'url',
+    }),
   ],
 })
