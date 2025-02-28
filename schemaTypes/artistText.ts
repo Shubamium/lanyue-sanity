@@ -38,5 +38,16 @@ export default defineType({
         },
       ],
     }),
+    defineField({
+      name: 'order',
+      title: 'Category Order',
+      type: 'array',
+      of: [
+        {
+          type: 'reference',
+          to: [{type: 'artist_type'}],
+        },
+      ],
+    }),
   ],
 })

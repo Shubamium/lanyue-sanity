@@ -29,5 +29,22 @@ export default defineType({
       type: 'array',
       of: [{type: 'block'}],
     }),
+
+    defineField({
+      name: 'order',
+      title: 'Category Order',
+      type: 'array',
+      of: [
+        {
+          type: 'reference',
+          // to:'portfolio',
+          to: [
+            {
+              type: 'portfolio',
+            },
+          ],
+        },
+      ],
+    }),
   ],
 })
