@@ -15,5 +15,13 @@ export default defineType({
       name: 'image',
       type: 'image',
     }),
+    defineField({
+      name: 'y',
+      title: 'Y Position Adjusment ',
+      description:
+        '0(top)-100(bottom) position fit for images shown in portfolio, Default is 40   ',
+      type: 'number',
+      initialValue: 40,
+    }),
   ],
 })
