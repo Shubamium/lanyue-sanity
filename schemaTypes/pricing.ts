@@ -11,6 +11,12 @@ export default defineType({
       type: 'string',
     }),
     defineField({
+      name: 'slug',
+      description:
+        'The slug identifier for category from commission page to go here when clicked (prices page)',
+      type: 'slug',
+    }),
+    defineField({
       name: 'description',
       type: 'array',
       of: [

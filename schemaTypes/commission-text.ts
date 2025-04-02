@@ -67,6 +67,11 @@ export default defineType({
                   type: 'string',
                 }),
                 defineField({
+                  name: 'slug',
+                  description: 'When clicked it will go to the pricing with this same slug.',
+                  type: 'slug',
+                }),
+                defineField({
                   name: 'p',
                   title: 'Paragraph',
                   type: 'array',
