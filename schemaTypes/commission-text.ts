@@ -78,9 +78,8 @@ export default defineType({
                   of: [{type: 'block'}],
                 }),
                 defineField({
-                  name: 'icon',
-                  description: 'SVG Recommended, You can find more on fontawesome.com',
-                  type: 'file',
+                  name: 'art',
+                  type: 'image',
                 }),
 
                 defineField({
