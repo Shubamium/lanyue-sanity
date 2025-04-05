@@ -96,6 +96,34 @@ export default defineType({
       ],
     }),
     defineField({
+      name: 'Prices',
+      title: 'Prices Section',
+      type: 'object',
+      fields: [
+        defineField({
+          name: 'sh',
+          title: 'Subheading',
+          type: 'string',
+        }),
+        defineField({
+          name: 'h',
+          title: 'Heading',
+          type: 'string',
+        }),
+        defineField({
+          name: 'p',
+          title: 'Paragraph',
+          type: 'array',
+          of: [{type: 'block'}],
+        }),
+        defineField({
+          name: 'img',
+          title: 'Image',
+          type: 'imaged',
+        }),
+      ],
+    }),
+    defineField({
       name: 'pinned_pricing',
       title: 'Pinned Pricing',
       description: 'Pricing to show at the top of commissions page',

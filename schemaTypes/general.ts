@@ -46,5 +46,15 @@ export default defineType({
       title: 'Discord Url',
       type: 'url',
     }),
+    defineField({
+      name: 'cf',
+      title: 'Commission Form URL',
+      type: 'url',
+    }),
+    defineField({
+      name: 'af',
+      title: 'Artist Form URL',
+      type: 'url',
+    }),
   ],
 })

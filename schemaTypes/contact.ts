@@ -53,6 +53,10 @@ export default defineType({
               name: 'info',
               type: 'string',
             }),
+            defineField({
+              name: 'isLink',
+              type: 'boolean',
+            }),
           ],
         },
       ],
@@ -63,11 +67,11 @@ export default defineType({
       type: 'string',
     }),
 
-    defineField({
-      name: 'hb',
-      title: 'Heading Button',
-      type: 'button',
-    }),
+    // defineField({
+    //   name: 'hb',
+    //   title: 'Heading Button',
+    //   type: 'button',
+    // }),
 
     defineField({
       name: 'st',
