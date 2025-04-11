@@ -267,6 +267,11 @@ export default defineType({
                 }),
               ],
             },
+            {
+              name: 'embed',
+              title: 'Video Embed',
+              type: 'embed',
+            },
           ],
         }),
       ],
