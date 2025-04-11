@@ -21,6 +21,7 @@ export default defineType({
     defineField({
       name: 'url',
       title: 'Video URL',
+      description: "Change the 'play' part of the url to 'embed'",
       type: 'url',
     }),
   ],
