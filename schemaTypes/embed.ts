@@ -19,6 +19,11 @@ export default defineType({
       type: 'string',
     }),
     defineField({
+      name: 'artist',
+      title: 'Artist Name',
+      type: 'string',
+    }),
+    defineField({
       name: 'url',
       title: 'Video URL',
       description: "Change the 'play' part of the url to 'embed'",
