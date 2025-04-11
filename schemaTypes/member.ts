@@ -70,6 +70,10 @@ export default defineType({
           description: 'Recommended .webm',
           type: 'file',
         }),
+        defineField({
+          name: 'embed',
+          type: 'embed',
+        }),
       ],
     }),
 

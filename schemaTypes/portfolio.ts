@@ -38,6 +38,12 @@ export default defineType({
               description: 'Recommended .webm',
               type: 'file',
             }),
+            defineField({
+              name: 'url',
+              title: 'Video URL',
+              description: 'Will use video url if provided',
+              type: 'url',
+            }),
           ],
         }),
       ],

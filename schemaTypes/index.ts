@@ -3,6 +3,7 @@ import artistType from './artistType'
 import button from './button'
 import commissionText from './commission-text'
 import contact from './contact'
+import embed from './embed'
 import general from './general'
 import home from './home'
 import image from './image'
@@ -26,4 +27,5 @@ export const schemaTypes = [
   terms,
   image,
   button,
+  embed,
 ]
